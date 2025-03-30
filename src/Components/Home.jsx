@@ -1,13 +1,20 @@
 import React from "react";
-import { Home, Settings } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight, Home, Settings } from "lucide-react";
 
 const HomePage = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
   return (
     <div className="p-6">
       {/* Top Bar with Settings Icon */}
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">EduAR</h1>
-        <Settings size={24} className="text-gray-600 cursor-pointer" />
+        <Settings
+          size={24}
+          className="text-gray-600 cursor-pointer"
+          onClick={() => navigate("/settings")} // Navigate to Settings page
+        />
       </div>
 
       {/* Overall Progress Section */}
@@ -51,7 +58,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Quick Start Section with 4 Squares */}
+      {/* Quick Start Section */}
       <div className="mt-4">
         <p className="text-gray-600 font-semibold mb-2">Quick Start</p>
         <div className="grid grid-cols-2 gap-3">
@@ -88,7 +95,9 @@ const HomePage = () => {
             <p className="text-sm text-gray-500">Completed</p>
           </div>
           <div className="ml-auto">
-            <span className="text-green-500 font-bold">✔</span>
+            <span className="text-green-500 font-bold">
+              <ArrowRight size={24} className="mr-2" />
+            </span>
           </div>
         </div>
       </div>
