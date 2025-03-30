@@ -35,14 +35,14 @@ const Profile = () => {
       </div>
 
       <div className="flex justify-center mt-6">
-        <button className="flex items-center bg-green-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-600 transition">
+        <button className="flex items-center bg-green-800 text-white py-2 px-6 rounded-lg shadow-md hover:bg-red-600 transition">
           <Save size={20} className="mr-2" />
           Save
         </button>
       </div>
 
       <div className="flex justify-center mt-6">
-        <button className="flex items-center bg-red-500 text-white py-3 px-30 rounded-lg shadow-md hover:bg-red-600 transition">
+        <button className="flex items-center bg-red-500 text-white py-2 px-24 rounded-lg shadow-md hover:bg-red-600 transition">
           <LogOut size={20} className="mr-2" />
           Log Out
         </button>
