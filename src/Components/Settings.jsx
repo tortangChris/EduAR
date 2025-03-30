@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ArrowLeft,
   User,
   ShieldCheck,
   Moon,
@@ -8,6 +9,7 @@ import {
   Send,
   FileText,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const settingsOptions = [
   {
@@ -63,9 +65,18 @@ const settingsOptions = [
 ];
 
 const Settings = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="p-6 max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Settings</h2>
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center text-gray-700 font-bold text-lg mb-4"
+      >
+        <ArrowLeft size={24} className="mr-2" />
+        Settings
+      </button>
 
       {settingsOptions.map((section, index) => (
         <div key={index} className="mb-4 bg-white rounded-lg shadow-md p-4">
